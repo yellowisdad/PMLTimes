@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="RadioboxView" customModule="PMLTimes" customModuleProvider="target">
+            <connections>
+                <outlet property="bgView" destination="R5I-KZ-aZ2" id="evG-9q-vLN"/>
+                <outlet property="checkView" destination="msb-DQ-oy2" id="Zxc-zl-FzK"/>
+                <outlet property="contentView" destination="qdH-Wx-sXd" id="Jo2-yG-All"/>
+                <outlet property="titleLabel" destination="shL-Bs-1wf" id="Ruq-1m-4pM"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="qdH-Wx-sXd">
+            <rect key="frame" x="0.0" y="0.0" width="335" height="296"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="R5I-KZ-aZ2">
+                    <rect key="frame" x="15" y="137" width="22" height="22"/>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="22" id="Tne-4L-1iF"/>
+                        <constraint firstAttribute="width" secondItem="R5I-KZ-aZ2" secondAttribute="height" multiplier="1:1" id="sqK-p1-dRI"/>
+                    </constraints>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                            <real key="value" value="1"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                            <color key="value" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="boolean" keyPath="circleCorner" value="YES"/>
+                    </userDefinedRuntimeAttributes>
+                </view>
+                <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="msb-DQ-oy2">
+                    <rect key="frame" x="18.5" y="140.5" width="15" height="15"/>
+                    <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="15" id="4Jc-cx-uHW"/>
+                        <constraint firstAttribute="width" secondItem="msb-DQ-oy2" secondAttribute="height" multiplier="1:1" id="owf-6x-Bo5"/>
+                    </constraints>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                            <color key="value" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="boolean" keyPath="circleCorner" value="YES"/>
+                    </userDefinedRuntimeAttributes>
+                </view>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uma-29-oUw">
+                    <rect key="frame" x="0.0" y="0.0" width="335" height="296"/>
+                    <connections>
+                        <action selector="didPressView:" destination="-1" eventType="touchUpInside" id="g6a-2e-FLG"/>
+                    </connections>
+                </button>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="shL-Bs-1wf">
+                    <rect key="frame" x="47" y="148" width="288" height="0.0"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="1tT-nV-Trj"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="R5I-KZ-aZ2" firstAttribute="centerY" secondItem="qdH-Wx-sXd" secondAttribute="centerY" id="7FM-Mr-pJv"/>
+                <constraint firstItem="R5I-KZ-aZ2" firstAttribute="leading" secondItem="1tT-nV-Trj" secondAttribute="leading" constant="15" id="BGx-1W-CAO"/>
+                <constraint firstItem="shL-Bs-1wf" firstAttribute="leading" secondItem="R5I-KZ-aZ2" secondAttribute="trailing" constant="10" id="BqB-fG-rOs"/>
+                <constraint firstItem="1tT-nV-Trj" firstAttribute="trailing" secondItem="uma-29-oUw" secondAttribute="trailing" id="G5R-gg-lwH"/>
+                <constraint firstItem="shL-Bs-1wf" firstAttribute="centerY" secondItem="R5I-KZ-aZ2" secondAttribute="centerY" id="LaQ-ni-onr"/>
+                <constraint firstItem="msb-DQ-oy2" firstAttribute="centerY" secondItem="R5I-KZ-aZ2" secondAttribute="centerY" id="NYV-uQ-CAA"/>
+                <constraint firstItem="uma-29-oUw" firstAttribute="bottom" secondItem="1tT-nV-Trj" secondAttribute="bottom" id="QRB-fz-Ygl"/>
+                <constraint firstItem="1tT-nV-Trj" firstAttribute="trailing" secondItem="shL-Bs-1wf" secondAttribute="trailing" id="du9-3S-3YO"/>
+                <constraint firstItem="uma-29-oUw" firstAttribute="top" secondItem="qdH-Wx-sXd" secondAttribute="top" id="jmF-MQ-ozC"/>
+                <constraint firstItem="uma-29-oUw" firstAttribute="leading" secondItem="1tT-nV-Trj" secondAttribute="leading" id="m1H-ba-V9y"/>
+                <constraint firstItem="msb-DQ-oy2" firstAttribute="centerX" secondItem="R5I-KZ-aZ2" secondAttribute="centerX" id="mNX-zE-B1S"/>
+            </constraints>
+            <nil key="simulatedTopBarMetrics"/>
+            <nil key="simulatedBottomBarMetrics"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="113.768115942029" y="-11.383928571428571"/>
+        </view>
+    </objects>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

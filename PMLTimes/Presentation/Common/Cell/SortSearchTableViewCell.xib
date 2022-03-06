@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" rowHeight="402" id="KGk-i7-Jjw" customClass="SortSearchTableViewCell" customModule="PMLTimes" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="554" height="402"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="554" height="402"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Begin Date" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tfF-Pe-dsT">
+                        <rect key="frame" x="20" y="11" width="83.5" height="246"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="VCZ-SD-WbI">
+                        <rect key="frame" x="20" y="272" width="514" height="110"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="SYn-ga-y4U" customClass="RadioboxView" customModule="PMLTimes" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="0.0" width="514" height="30"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="b9K-rD-2wT"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="eVz-tz-mYm" customClass="RadioboxView" customModule="PMLTimes" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="40" width="514" height="30"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dew-Kh-UZ1" customClass="RadioboxView" customModule="PMLTimes" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="80" width="514" height="30"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </view>
+                        </subviews>
+                    </stackView>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="VCZ-SD-WbI" firstAttribute="top" secondItem="tfF-Pe-dsT" secondAttribute="bottom" constant="15" id="PC3-eC-309"/>
+                    <constraint firstItem="tfF-Pe-dsT" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="20" symbolic="YES" id="W15-Tz-stA"/>
+                    <constraint firstItem="tfF-Pe-dsT" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" id="eYc-DW-U90"/>
+                    <constraint firstAttribute="bottom" secondItem="VCZ-SD-WbI" secondAttribute="bottom" constant="20" symbolic="YES" id="jMO-h5-fUG"/>
+                    <constraint firstAttribute="trailing" secondItem="VCZ-SD-WbI" secondAttribute="trailing" constant="20" symbolic="YES" id="u5m-Wr-J3a"/>
+                    <constraint firstItem="VCZ-SD-WbI" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="20" symbolic="YES" id="xnH-iT-yHo"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="newestRadioBoxView" destination="SYn-ga-y4U" id="cPi-tF-xgw"/>
+                <outlet property="oldestRadioBoxView" destination="eVz-tz-mYm" id="fjv-rV-9c9"/>
+                <outlet property="relevanceRadioBoxView" destination="dew-Kh-UZ1" id="zwh-AL-01T"/>
+                <outlet property="titleLabel" destination="tfF-Pe-dsT" id="sYe-hB-cQB"/>
+            </connections>
+            <point key="canvasLocation" x="30.434782608695656" y="225"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
