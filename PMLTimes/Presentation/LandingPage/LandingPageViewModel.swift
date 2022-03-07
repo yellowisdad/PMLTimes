@@ -6,10 +6,12 @@
 //
 
 import Foundation
+import RxRelay
 
 class LandingPageViewModel {
     
     private let authUseCase: AuthenticationUseCase = AuthenticationUseCase()
+    let state: BehaviorRelay<State> = BehaviorRelay(value: .idle)
     
     init(){}
     
@@ -24,9 +26,15 @@ class LandingPageViewModel {
     }
     
     func openHomePage(){
-        let model = HomePageViewModel()
-        let vc = HomePageView.create(with: model)
-        AppGlobal.shared.navigationController?.pushViewController(vc, animated: false)
+        switch state.value {
+        case .loaded:
+            return
+        default:
+            state.accept(.loaded)
+            let model = HomePageViewModel()
+            let vc = HomePageView.create(with: model)
+            AppGlobal.shared.navigationController?.pushViewController(vc, animated: false)
+        }
     }
 }
 
