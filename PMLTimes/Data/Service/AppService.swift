@@ -9,10 +9,12 @@ import Foundation
 
 class ServiceURL {
     private(set) var url: URL
+    private(set) var imageDomain: String
     private(set) var key: String
     
-    init (url: String, key: String = "") {
+    init (url: String, key: String = "", imageDomain: String = "") {
         self.url = URL(string: url)!
         self.key = key
+        self.imageDomain = imageDomain
     }
 }

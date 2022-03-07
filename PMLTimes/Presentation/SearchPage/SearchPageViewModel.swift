@@ -15,9 +15,6 @@ class SearchPageViewModel {
     // MARK: - UseCase
     private let searchArticle: SearchArticleUseCase = SearchArticleUseCase()
     
-    
-    //let sort: BehaviorRelay<SearchSort> = BehaviorRelay(value: .newest)
-    
     let error: BehaviorRelay<String?> = BehaviorRelay(value: nil)
     let loading: BehaviorRelay<Bool> = BehaviorRelay(value: false)
     let contents: BehaviorRelay<[ArticleModel] > = BehaviorRelay(value: [])
@@ -26,18 +23,7 @@ class SearchPageViewModel {
     var query: String = ""
     
     init(){
-        
-//        page
-//            .subscribe(onNext: { _ in
-//                self.load()
-//            })
-//            .disposed(by: disposeBag)
-//
-//        period
-//            .subscribe(onNext: { _ in
-//                self.load()
-//            })
-//            .disposed(by: disposeBag)
+
     }
     
 }
@@ -97,14 +83,8 @@ extension SearchPageViewModel {
         AppGlobal.shared.navigationController?.pushViewController(vc, animated: true)
     }
     
-    
-    
     func searchSuggestion(_ query: String) {
         //loadSuggest(query: query)
     }
-//
-//    func search(_ query: String) {
-//       // navigateToSearchTab.onNext(query)
-//    }
-    
+
 }

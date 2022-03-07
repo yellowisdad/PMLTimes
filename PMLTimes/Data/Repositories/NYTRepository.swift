@@ -40,9 +40,6 @@ final class NYTRepositoryImpl : NYTRepository {
             .mapObject(ArticleSearchResponse.self)
             .catchErrorWithInfo()
     }
-    
-    
-    
 }
 
 
