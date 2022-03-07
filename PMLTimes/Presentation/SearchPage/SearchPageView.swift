@@ -108,6 +108,12 @@ extension SearchPageView {
                 self.tableView.reloadData()
             }).disposed(by: disposeBag)
         
+        viewModel.suggests.asObservable()
+            .observeOn(MainScheduler.instance)
+            .bind(onNext: { content in
+                self.tableView.reloadData()
+            }).disposed(by: disposeBag)
+        
         viewModel.loading.asObservable()
             .observeOn(MainScheduler.instance)
             .bind(onNext: { isLoading in
@@ -115,11 +121,6 @@ extension SearchPageView {
                     self.tableView.finishInfiniteScroll()
                 }
             }).disposed(by: disposeBag)
-        
-//        viewModel.loading.asObservable()
-//            .observeOn(MainScheduler.instance)
-//            .bind(to: spinner.rx.isAnimating)
-//            .disposed(by: disposeBag)
         
         viewModel.error.asObservable()
             .observeOn(MainScheduler.instance)
@@ -136,7 +137,10 @@ extension SearchPageView : UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         switch pageSections[indexPath.section] {
         case .suggest:
-            break
+            let querySuggest = viewModel.suggests.value[indexPath.row]
+            textField.text = querySuggest
+            viewModel.query = querySuggest
+            viewModel.openSearchResultsPage()
         case .preview:
             viewModel.openDetailPage(info: viewModel.contents.value[indexPath.row])
         case .goSearch:
@@ -146,13 +150,29 @@ extension SearchPageView : UITableViewDelegate {
 }
 
 extension SearchPageView : UITableViewDataSource {
+    
+    func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+        guard pageSections[section] == .suggest else { return nil }
+        return "Suggest Search"
+    }
+    
+    func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+        guard pageSections[section] == .suggest else { return 5 }
+        return 30
+    }
+    
+    func tableView(_ tableView: UITableView, heightForFooterInSection section: Int) -> CGFloat {
+        return 5
+    }
+    
     func numberOfSections(in tableView: UITableView) -> Int {
         return pageSections.count
     }
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         switch pageSections[section] {
         case .suggest:
-            return 0
+            return viewModel.suggests.value.count > 5 ? 5 : viewModel.suggests.value.count
         case .preview:
             return viewModel.contents.value.count
         case .goSearch:
@@ -164,10 +184,12 @@ extension SearchPageView : UITableViewDataSource {
         switch pageSections[indexPath.section] {
         case .suggest:
             guard let cell = tableView.dequeueReusableCell(withIdentifier: "suggestSearchCell", for: indexPath) as? SuggestTableViewCell else { return UITableViewCell() }
+            let info = viewModel.suggests.value[indexPath.row]
+            cell.titleLabel.text = info
             return cell
             
         case .goSearch:
-            guard let cell = tableView.dequeueReusableCell(withIdentifier: "suggestSearchCell", for: indexPath) as? SuggestTableViewCell else { return UITableViewCell() }
+            guard let cell = tableView.dequeueReusableCell(withIdentifier: "goSearchCell", for: indexPath) as? SuggestTableViewCell else { return UITableViewCell() }
             cell.titleLabel.text = "go to \"\(viewModel.query)\""
             return cell
             

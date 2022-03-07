@@ -14,10 +14,13 @@ class SearchPageViewModel {
     
     // MARK: - UseCase
     private let searchArticle: SearchArticleUseCase = SearchArticleUseCase()
+    private let getSuggestSearch: SuggestSearchUseCase = SuggestSearchUseCase()
+    private let addSuggestSearch: AddSuggestSearchUseCase = AddSuggestSearchUseCase()
     
     let error: BehaviorRelay<String?> = BehaviorRelay(value: nil)
     let loading: BehaviorRelay<Bool> = BehaviorRelay(value: false)
     let contents: BehaviorRelay<[ArticleModel] > = BehaviorRelay(value: [])
+    let suggests: BehaviorRelay<[String] > = BehaviorRelay(value: [])
     
     var isEmpty: Bool { return contents.value.isEmpty }
     var query: String = ""
@@ -35,7 +38,16 @@ extension SearchPageViewModel {
     }
     
     private func load() {
-        
+        searchSuggestion()
+    }
+    
+    private func addSuggestsSearch(){
+        var newSuggests =  suggests.value
+        if let foundindex = newSuggests.firstIndex(where: { $0 == query }) {
+            newSuggests.remove(at: foundindex)
+        }
+        newSuggests.insert(query, at: 0)
+        addSuggestSearch.execute(newSuggests)
     }
     
     func searchTextFieldEmptry() {
@@ -48,6 +60,7 @@ extension SearchPageViewModel {
             error.accept(nil)
         }
         loading.accept(true)
+        
         searchArticle.execute((query: query,
                                begin_date: Date().addChangeDateTime(year: -10).customDateFormat("yyyyMMdd"),
                                end_date: Date().customDateFormat("yyyyMMdd"),
@@ -64,8 +77,16 @@ extension SearchPageViewModel {
                     break
                 }
             }).disposed(by: disposeBag)
+        
+        
     }
     
+    func searchSuggestion(){
+        getSuggestSearch.execute(){ (items,error)  in
+            print(items)
+            self.suggests.accept(items)
+        }
+    }
 }
 
 // MARK: - OUTPUT
@@ -78,13 +99,10 @@ extension SearchPageViewModel {
     }
     
     func openSearchResultsPage(){
+        addSuggestsSearch()
         let model = SearchResultsViewModel(query: query)
         let vc = SearchResultsView.create(with: model)
         AppGlobal.shared.navigationController?.pushViewController(vc, animated: true)
-    }
-    
-    func searchSuggestion(_ query: String) {
-        //loadSuggest(query: query)
     }
 
 }
