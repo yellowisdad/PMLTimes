@@ -270,12 +270,12 @@
 		7F6F2DFE27D3566000ACCC8C /* PMLTimes */ = {
 			isa = PBXGroup;
 			children = (
-				7FCF6F2127D3AED100838626 /* Extension */,
 				7FCF6EE727D3688D00838626 /* Application */,
 				7FCF6EE827D3689800838626 /* Domain */,
 				7FCF6EEA27D368E300838626 /* Presentation */,
 				7FCF6EE927D368C600838626 /* Data */,
 				7FCF6EEB27D368EB00838626 /* Resources */,
+				7FCF6F2127D3AED100838626 /* Extension */,
 			);
 			path = PMLTimes;
 			sourceTree = "<group>";
@@ -328,6 +328,7 @@
 			isa = PBXGroup;
 			children = (
 				7F1CF7BE27D41C7B003CB70E /* GoogleService-Info.plist */,
+				7FCF6EFC27D36F3B00838626 /* AppGlobal.swift */,
 				7F6F2DFF27D3566000ACCC8C /* AppDelegate.swift */,
 				7F6F2E0127D3566000ACCC8C /* SceneDelegate.swift */,
 				7F6F2E0D27D3566200ACCC8C /* Info.plist */,
@@ -412,8 +413,6 @@
 			isa = PBXGroup;
 			children = (
 				7FCF6EF427D36BEF00838626 /* NYTRepository.swift */,
-				7F8DA6C227D3EB42002E47E2 /* PMLTimesProvider.swift */,
-				7FCF6EF727D36C4400838626 /* NYTimesAPI.swift */,
 			);
 			path = Repositories;
 			sourceTree = "<group>";
@@ -434,7 +433,8 @@
 		7FCF6EF927D36DCC00838626 /* Service */ = {
 			isa = PBXGroup;
 			children = (
-				7FCF6EFC27D36F3B00838626 /* AppGlobal.swift */,
+				7F8DA6C227D3EB42002E47E2 /* PMLTimesProvider.swift */,
+				7FCF6EF727D36C4400838626 /* NYTimesAPI.swift */,
 			);
 			path = Service;
 			sourceTree = "<group>";
