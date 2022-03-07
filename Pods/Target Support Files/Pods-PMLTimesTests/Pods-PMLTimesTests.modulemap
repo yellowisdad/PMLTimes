@@ -1,6 +1,0 @@
-framework module Pods_PMLTimesTests {
-  umbrella header "Pods-PMLTimesTests-umbrella.h"
-
-  export *
-  module * { export * }
-}
