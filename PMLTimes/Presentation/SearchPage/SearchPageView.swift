@@ -94,6 +94,13 @@ extension SearchPageView {
             })
             .disposed(by: disposeBag)
         
+        textField.rx.controlEvent(.editingChanged)
+            .subscribe(onNext: { [unowned self] in
+                guard let text = self.textField.text, text.range(of: " ") != nil else { return }
+                self.textField.text = text.trimmingCharacters(in: .whitespaces)
+            })
+            .disposed(by: disposeBag)
+        
         textField.rx.controlEvent(.editingDidEndOnExit)
             .subscribe(onNext: { [unowned self] in
                 guard let text = self.textField.text, text != "" else { return }
