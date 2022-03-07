@@ -22,10 +22,10 @@ class HomePageViewModel {
     private var disposeBag: DisposeBag = DisposeBag()
     
     private let getMostPopularUseCase: GetMostPopularArticleUseCase
-    @Published private(set) var state: State = .idle
     let isSpinning: BehaviorRelay<Bool> = BehaviorRelay(value: false)
     let period: BehaviorRelay<MostPopularPeriod> = BehaviorRelay(value: .day)
     let contents: BehaviorRelay<[ArticleModel]> = BehaviorRelay(value: [])
+    let state: BehaviorRelay<State> = BehaviorRelay(value: .idle)
     
     init(getMostPopular: GetMostPopularArticleUseCase = GetMostPopularArticleUseCaseImpl()){
         self.getMostPopularUseCase = getMostPopular
@@ -47,18 +47,18 @@ extension HomePageViewModel {
     }
     
     func getMostPopular(){
-        state = .loading
+        state.accept(.loading)
             
             getMostPopularUseCase.execute(period.value)
                 .subscribe({ (event) in
                     
                     switch event {
                     case .next(let items):
-                        self.state = .loaded
+                        self.state.accept(.loaded)
                         self.contents.accept(items)
                         
                     case .error(let error):
-                        self.state = .error(e: error)
+                        self.state.accept(.error(e: error))
                         
                     case .completed:
                         break
