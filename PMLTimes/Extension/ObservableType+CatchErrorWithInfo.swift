@@ -29,6 +29,7 @@ public class PMLTimesServiceError: Mappable {
     var message: String?
     var errorcode: String?
 
+    init(){}
     required public init?(map: Map) {
         guard (map.JSON["fault"] as? [String: Any]) != nil else {
             return nil

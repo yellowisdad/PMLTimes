@@ -58,6 +58,7 @@ extension FilterPageView {
 }
 
 extension FilterPageView : UITableViewDataSource {
+    
     func numberOfSections(in tableView: UITableView) -> Int {
         return 2
     }

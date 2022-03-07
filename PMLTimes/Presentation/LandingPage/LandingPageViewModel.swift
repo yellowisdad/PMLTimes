@@ -6,35 +6,31 @@
 //
 
 import Foundation
-import RxRelay
 
 class LandingPageViewModel {
     
-    private let authUseCase: AuthenticationUseCase = AuthenticationUseCaseImpl()
-    let state: BehaviorRelay<State> = BehaviorRelay(value: .idle)
+    enum PageState {
+        case idle
+        case loaded
+    }
     
+    private let authUseCase: AuthenticationUseCase = AuthenticationUseCaseImpl()
+    private var state: PageState = .idle
     init(){}
     
     func load(){
         authUseCase.execute(){ service, _  in
-            guard let service = service else {
-                return
-            }
+            guard let service = service else { return }
             AppGlobal.shared.service = service
             self.openHomePage()
         }
     }
     
     func openHomePage(){
-        switch state.value {
-        case .loaded:
-            return
-        default:
-            state.accept(.loaded)
-            let model = HomePageViewModel()
-            let vc = HomePageView.create(with: model)
-            AppGlobal.shared.navigationController?.pushViewController(vc, animated: false)
-        }
+        guard state == .idle else { return }
+        let model = HomePageViewModel()
+        let vc = HomePageView.create(with: model)
+        AppGlobal.shared.navigationController?.pushViewController(vc, animated: false)
     }
 }
 
