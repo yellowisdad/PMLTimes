@@ -18,8 +18,15 @@ Homepage  | Detail page  | Search page
 ![](https://im2.ezgif.com/tmp/ezgif-2-ce84c6634a.gif) | ![](https://im4.ezgif.com/tmp/ezgif-4-0cae96dd67.gif) | ![](https://im4.ezgif.com/tmp/ezgif-4-a5b25d8b0b.gif)
 
 
-## Requirements
-- Xcode 13
-- iOS 14.2
+## Installation
+>Built using XCode 13.2.1 (Swift 5)
+- Clone this repo
+- Open shell window and navigate to project folder
+- Run `pod install`
+- Open `PMLTimes.xcworkspace` and run the project on selected device or simulator
 
-## Common setup
+## Thanks:)
+
+>methawee punkaew (mey)
+
+mp.methawee@gmail.com
