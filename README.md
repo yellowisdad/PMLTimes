@@ -16,3 +16,10 @@ Display the article retrieved from the New York Times API.
 Homepage  | Detail page  | Search page
 ------------- | ------------- | -------------
 ![](https://im2.ezgif.com/tmp/ezgif-2-ce84c6634a.gif) | ![](https://im4.ezgif.com/tmp/ezgif-4-0cae96dd67.gif) | ![](https://im4.ezgif.com/tmp/ezgif-4-a5b25d8b0b.gif)
+
+
+## Requirements
+- Xcode 13
+- iOS 14.2
+
+## Common setup
