@@ -126,7 +126,7 @@ extension SearchResultsView {
                         self.viewModel.allContents = []
                     }
                 case .emptry:
-                    self.emtryLabel.text = "no results for \"\(self.viewModel.query)\""
+                    self.emtryLabel.text = "no results for \"\(self.viewModel.query)\" in the period."
                     self.emtryLabel.isHidden = false
                 }
             }).disposed(by: disposeBag)

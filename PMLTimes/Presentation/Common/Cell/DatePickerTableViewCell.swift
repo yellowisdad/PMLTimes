@@ -17,6 +17,7 @@ class DatePickerTableViewCell: UITableViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
+        datePicker.tintColor = .black
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {

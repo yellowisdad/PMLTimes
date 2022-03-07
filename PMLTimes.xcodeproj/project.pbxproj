@@ -33,6 +33,8 @@
 		7F26506027D55E7F000C9E21 /* RadioboxView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7F26505F27D55E7F000C9E21 /* RadioboxView.xib */; };
 		7F26506327D55F9C000C9E21 /* SortSearchTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F26506127D55F9C000C9E21 /* SortSearchTableViewCell.swift */; };
 		7F26506427D55F9C000C9E21 /* SortSearchTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7F26506227D55F9C000C9E21 /* SortSearchTableViewCell.xib */; };
+		7F52E27827D5E70200AF4D83 /* SuggestSearchUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F52E27727D5E70200AF4D83 /* SuggestSearchUseCase.swift */; };
+		7F52E27A27D6147D00AF4D83 /* AddSuggestSearchUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F52E27927D6147C00AF4D83 /* AddSuggestSearchUseCase.swift */; };
 		7F6F2E0027D3566000ACCC8C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F6F2DFF27D3566000ACCC8C /* AppDelegate.swift */; };
 		7F6F2E0227D3566000ACCC8C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F6F2E0127D3566000ACCC8C /* SceneDelegate.swift */; };
 		7F6F2E0427D3566000ACCC8C /* LandingPageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F6F2E0327D3566000ACCC8C /* LandingPageView.swift */; };
@@ -57,7 +59,7 @@
 		7FB2A98A27D5DFBF006E51C7 /* AuthenticationUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FB2A98927D5DFBF006E51C7 /* AuthenticationUseCase.swift */; };
 		7FCF6EF527D36BEF00838626 /* NYTRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FCF6EF427D36BEF00838626 /* NYTRepository.swift */; };
 		7FCF6EF827D36C4400838626 /* NYTimesAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FCF6EF727D36C4400838626 /* NYTimesAPI.swift */; };
-		7FCF6EFB27D36DDD00838626 /* AppService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FCF6EFA27D36DDD00838626 /* AppService.swift */; };
+		7FCF6EFB27D36DDD00838626 /* ServiceURL.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FCF6EFA27D36DDD00838626 /* ServiceURL.swift */; };
 		7FCF6EFD27D36F3B00838626 /* AppGlobal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FCF6EFC27D36F3B00838626 /* AppGlobal.swift */; };
 		7FCF6F1627D37DCF00838626 /* DetailWebView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FCF6F1527D37DCE00838626 /* DetailWebView.swift */; };
 		7FCF6F1927D3871100838626 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FCF6F1827D3871100838626 /* BaseViewController.swift */; };
@@ -117,6 +119,8 @@
 		7F26505F27D55E7F000C9E21 /* RadioboxView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RadioboxView.xib; sourceTree = "<group>"; };
 		7F26506127D55F9C000C9E21 /* SortSearchTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SortSearchTableViewCell.swift; sourceTree = "<group>"; };
 		7F26506227D55F9C000C9E21 /* SortSearchTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SortSearchTableViewCell.xib; sourceTree = "<group>"; };
+		7F52E27727D5E70200AF4D83 /* SuggestSearchUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuggestSearchUseCase.swift; sourceTree = "<group>"; };
+		7F52E27927D6147C00AF4D83 /* AddSuggestSearchUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddSuggestSearchUseCase.swift; sourceTree = "<group>"; };
 		7F6F2DFC27D3566000ACCC8C /* PMLTimes.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PMLTimes.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7F6F2DFF27D3566000ACCC8C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7F6F2E0127D3566000ACCC8C /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -145,7 +149,7 @@
 		7FB2A98927D5DFBF006E51C7 /* AuthenticationUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationUseCase.swift; sourceTree = "<group>"; };
 		7FCF6EF427D36BEF00838626 /* NYTRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NYTRepository.swift; sourceTree = "<group>"; };
 		7FCF6EF727D36C4400838626 /* NYTimesAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NYTimesAPI.swift; sourceTree = "<group>"; };
-		7FCF6EFA27D36DDD00838626 /* AppService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppService.swift; sourceTree = "<group>"; };
+		7FCF6EFA27D36DDD00838626 /* ServiceURL.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceURL.swift; sourceTree = "<group>"; };
 		7FCF6EFC27D36F3B00838626 /* AppGlobal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppGlobal.swift; sourceTree = "<group>"; };
 		7FCF6F1527D37DCE00838626 /* DetailWebView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailWebView.swift; sourceTree = "<group>"; };
 		7FCF6F1827D3871100838626 /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
@@ -395,6 +399,7 @@
 		7FCF6EF027D36B1800838626 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				7FCF6EFA27D36DDD00838626 /* ServiceURL.swift */,
 				7F8DA6B027D3BFA8002E47E2 /* NYTResponse.swift */,
 				7F26504B27D51390000C9E21 /* ArticleSearchModelel.swift */,
 				7F8DA6B327D3C1DA002E47E2 /* ArticleModel.swift */,
@@ -406,9 +411,9 @@
 		7FCF6EF127D36B2300838626 /* Repositories */ = {
 			isa = PBXGroup;
 			children = (
+				7FCF6EF427D36BEF00838626 /* NYTRepository.swift */,
 				7F8DA6C227D3EB42002E47E2 /* PMLTimesProvider.swift */,
 				7FCF6EF727D36C4400838626 /* NYTimesAPI.swift */,
-				7FCF6EF427D36BEF00838626 /* NYTRepository.swift */,
 			);
 			path = Repositories;
 			sourceTree = "<group>";
@@ -416,10 +421,12 @@
 		7FCF6EF227D36B3C00838626 /* Usecases */ = {
 			isa = PBXGroup;
 			children = (
+				7F8DA6BA27D3D136002E47E2 /* UseCase.swift */,
 				7F8DD77C27D3B53200B0D0CA /* MostPopularArticleUseCase.swift */,
 				7F26504927D50BA4000C9E21 /* SearchArticleUseCase.swift */,
 				7FB2A98927D5DFBF006E51C7 /* AuthenticationUseCase.swift */,
-				7F8DA6BA27D3D136002E47E2 /* UseCase.swift */,
+				7F52E27727D5E70200AF4D83 /* SuggestSearchUseCase.swift */,
+				7F52E27927D6147C00AF4D83 /* AddSuggestSearchUseCase.swift */,
 			);
 			path = Usecases;
 			sourceTree = "<group>";
@@ -427,7 +434,6 @@
 		7FCF6EF927D36DCC00838626 /* Service */ = {
 			isa = PBXGroup;
 			children = (
-				7FCF6EFA27D36DDD00838626 /* AppService.swift */,
 				7FCF6EFC27D36F3B00838626 /* AppGlobal.swift */,
 			);
 			path = Service;
@@ -751,7 +757,7 @@
 				7F6F2E0427D3566000ACCC8C /* LandingPageView.swift in Sources */,
 				7F8DA6B427D3C1DA002E47E2 /* ArticleModel.swift in Sources */,
 				7F8DA6BD27D3D179002E47E2 /* HomePageViewModel.swift in Sources */,
-				7FCF6EFB27D36DDD00838626 /* AppService.swift in Sources */,
+				7FCF6EFB27D36DDD00838626 /* ServiceURL.swift in Sources */,
 				7F26504127D4FDD9000C9E21 /* SearchResultsViewModel.swift in Sources */,
 				7FCF6F1627D37DCF00838626 /* DetailWebView.swift in Sources */,
 				7FCF6EF827D36C4400838626 /* NYTimesAPI.swift in Sources */,
@@ -769,6 +775,7 @@
 				7FB2A98627D5DC71006E51C7 /* LandingPageViewModel.swift in Sources */,
 				7F1CF7BC27D40EB1003CB70E /* ContentItemTableViewCell.swift in Sources */,
 				7F26505427D54EBB000C9E21 /* FilterPageView.swift in Sources */,
+				7F52E27827D5E70200AF4D83 /* SuggestSearchUseCase.swift in Sources */,
 				7F8DD77A27D3AF7900B0D0CA /* UIView+Extension.swift in Sources */,
 				7F26505E27D55E49000C9E21 /* RadioboxView.swift in Sources */,
 				7FCF6F1927D3871100838626 /* BaseViewController.swift in Sources */,
@@ -780,6 +787,7 @@
 				7F6F2E0027D3566000ACCC8C /* AppDelegate.swift in Sources */,
 				7F8DA6B127D3BFA8002E47E2 /* NYTResponse.swift in Sources */,
 				7F26504A27D50BA4000C9E21 /* SearchArticleUseCase.swift in Sources */,
+				7F52E27A27D6147D00AF4D83 /* AddSuggestSearchUseCase.swift in Sources */,
 				7F26505727D550D4000C9E21 /* FilterPageViewModel.swift in Sources */,
 				7F26504C27D51390000C9E21 /* ArticleSearchModelel.swift in Sources */,
 				7F26503C27D4F6FA000C9E21 /* SearchPageViewModel.swift in Sources */,
