@@ -22,8 +22,8 @@ class GetMostPopularArticleUseCaseTests: XCTestCase {
         let usecase = GetMostPopularArticleUseCaseImpl(repo: repo)
         usecase.execute(.day)
             .subscribe(onNext: { resp in
-                expectation.fulfill()
                 XCTAssertNotNil(resp)
+                expectation.fulfill()
             }, onError: { error in
                 XCTFail()
             }).disposed(by: self.disposeBag)

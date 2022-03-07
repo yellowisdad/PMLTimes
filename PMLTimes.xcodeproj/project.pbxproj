@@ -57,6 +57,7 @@
 		7F8DD77A27D3AF7900B0D0CA /* UIView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F8DD77927D3AF7900B0D0CA /* UIView+Extension.swift */; };
 		7F8DD77D27D3B53200B0D0CA /* GetMostPopularArticleUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F8DD77C27D3B53200B0D0CA /* GetMostPopularArticleUseCase.swift */; };
 		7F8DD77F27D3B61700B0D0CA /* MostPopularPeriod.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F8DD77E27D3B61700B0D0CA /* MostPopularPeriod.swift */; };
+		7FAABA5327D69DFC00CD31DC /* AuthenticationUseCaseTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FAABA5227D69DFC00CD31DC /* AuthenticationUseCaseTests.swift */; };
 		7FB2A98627D5DC71006E51C7 /* LandingPageViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FB2A98527D5DC71006E51C7 /* LandingPageViewModel.swift */; };
 		7FB2A98A27D5DFBF006E51C7 /* AuthenticationUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FB2A98927D5DFBF006E51C7 /* AuthenticationUseCase.swift */; };
 		7FC7444527D6394C002B2BF5 /* GetSearchArticleUseCaseTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FC7444427D6394B002B2BF5 /* GetSearchArticleUseCaseTest.swift */; };
@@ -153,6 +154,7 @@
 		7F8DD77927D3AF7900B0D0CA /* UIView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extension.swift"; sourceTree = "<group>"; };
 		7F8DD77C27D3B53200B0D0CA /* GetMostPopularArticleUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetMostPopularArticleUseCase.swift; sourceTree = "<group>"; };
 		7F8DD77E27D3B61700B0D0CA /* MostPopularPeriod.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MostPopularPeriod.swift; sourceTree = "<group>"; };
+		7FAABA5227D69DFC00CD31DC /* AuthenticationUseCaseTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationUseCaseTests.swift; sourceTree = "<group>"; };
 		7FB2A98527D5DC71006E51C7 /* LandingPageViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LandingPageViewModel.swift; sourceTree = "<group>"; };
 		7FB2A98927D5DFBF006E51C7 /* AuthenticationUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationUseCase.swift; sourceTree = "<group>"; };
 		7FC7444427D6394B002B2BF5 /* GetSearchArticleUseCaseTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetSearchArticleUseCaseTest.swift; sourceTree = "<group>"; };
@@ -290,6 +292,7 @@
 				7FC7444427D6394B002B2BF5 /* GetSearchArticleUseCaseTest.swift */,
 				7FC7444627D63C13002B2BF5 /* GetSuggestSearchUseCaseTest.swift */,
 				7FE59A5D27D64E0F00F039B2 /* AddSuggestSearchUseCaseTest.swift */,
+				7FAABA5227D69DFC00CD31DC /* AuthenticationUseCaseTests.swift */,
 			);
 			path = Usecase;
 			sourceTree = "<group>";
@@ -866,6 +869,7 @@
 				7FC7444727D63C13002B2BF5 /* GetSuggestSearchUseCaseTest.swift in Sources */,
 				7F61A5AB27D62CDA006451A4 /* GetMostPopularArticleUseCaseTests.swift in Sources */,
 				7FC7444527D6394C002B2BF5 /* GetSearchArticleUseCaseTest.swift in Sources */,
+				7FAABA5327D69DFC00CD31DC /* AuthenticationUseCaseTests.swift in Sources */,
 				7F61A5A327D62AF8006451A4 /* GetSearchArticleUseCaseSpy.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1045,8 +1049,10 @@
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UIUserInterfaceStyle = Light;
 				IPHONEOS_DEPLOYMENT_TARGET = 14.2;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1076,8 +1082,10 @@
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UIUserInterfaceStyle = Light;
 				IPHONEOS_DEPLOYMENT_TARGET = 14.2;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",

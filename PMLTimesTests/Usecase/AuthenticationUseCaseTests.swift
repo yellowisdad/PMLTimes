@@ -1,8 +1,8 @@
 //
-//  GetSuggestSearchUseCaseTest.swift
+//  AuthenticationUseCaseTests.swift
 //  PMLTimesTests
 //
-//  Created by Methawee Punkaew on 7/3/2565 BE.
+//  Created by Methawee Punkaew on 8/3/2565 BE.
 //
 
 import XCTest
@@ -10,22 +10,22 @@ import RxSwift
 import FirebaseFirestore
 
 @testable import PMLTimes
-class GetSuggestSearchUseCaseTest: XCTestCase {
 
-    func test_GetSuggestSearchIsNotNil_ShouldSuccess() {
+class AuthenticationUseCaseTests: XCTestCase {
+
+    func test_AuthenIsNotNil_ShouldSuccess() {
         let expectation = expectation(description: #function)
-        
-        let usecase = GetSuggestSearchUseCaseImpl()
-        usecase.execute { data, error in
+        let usecase = AuthenticationUseCaseImpl()
+        usecase.execute() { data, error in
             
             if let error = error {
                 XCTFail("Error: \(error.localizedDescription)")
-            } else {
+            }  else {
                 XCTAssertNotNil(data)
             }
+
             expectation.fulfill()
         }
-        
         wait(for: [expectation], timeout: 5)
     }
 }

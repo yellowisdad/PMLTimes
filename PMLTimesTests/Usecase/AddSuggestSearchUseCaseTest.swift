@@ -13,7 +13,7 @@ import FirebaseFirestore
 
 class AddSuggestSearchUseCaseTest: XCTestCase {
 
-    func test_AddSuggestSearchIsNotNil_ShouldSuccess() {
+    func test_AddSuggestSearch_ShouldSuccess() {
         let expectation = expectation(description: #function)
         let usecase = AddSuggestSearchUseCaseImpl()
         usecase.execute(query: ["test"]) { error in

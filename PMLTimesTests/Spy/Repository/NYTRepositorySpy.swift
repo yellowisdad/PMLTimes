@@ -41,3 +41,4 @@ final class NYTRepositorySpy: NYTRepository {
         return stubbedSearchArticleResult
     }
 }
+
