@@ -14,6 +14,7 @@ public class ArticleSearchResponse: Mappable {
     var results: [ArticleSearchModel] = []
     var error: [String] = []
 
+    public init() {}
     required public init?(map: Map) { }
 
     public func mapping(map: Map) {
@@ -30,6 +31,7 @@ public class MostPopularResponse: Mappable {
     var results: [ArticleModel] = []
     var error: PMLTimesServiceError?
 
+    public init() {}
     required public init?(map: Map) { }
 
     public func mapping(map: Map) {

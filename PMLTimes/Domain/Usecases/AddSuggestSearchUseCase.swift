@@ -9,28 +9,23 @@ import Foundation
 import RxSwift
 import FirebaseFirestore
 
-final class AddSuggestSearchUseCase: UseCase {
+public protocol AddSuggestSearchUseCase {
+    func execute(query: [String], completion: @escaping ((Error?)-> Void))
+}
+
+final class AddSuggestSearchUseCaseImpl: AddSuggestSearchUseCase {
+    private var repo: FirestoreRepository
     
-    fileprivate var db = Firestore.firestore()
-    init() {}
-    
-    public func execute(_ query: [String]) {
-        let document = db.collection("pmlTimes").document("b0Te2FroxTf2MIlRvWy1")
-        document.updateData([
-            "suggest-search": query
-        ]) { error in
-            print(error?.localizedDescription ?? "")
-        }
+    init(repo: FirestoreRepository = FirestoreRepositoryImpl()) {
+        self.repo = repo
     }
     
-//    public func execute(_ param: (query: String, completion: ((Error?)->Void))) {
-//        let document = db.collection("pmlTimes").document("JqmosZzfMPsa0UuSnoFx")
-//        document.updateData([
-//            "suggest-search": FieldValue.arrayUnion([param.query])
-//        ]) { error in
-//            param.completion(error)
-//        }
-//    }
+    public func execute(query: [String], completion: @escaping ((Error?)-> Void)) {
+        repo.addSuggestSearch(query: query, completion: { error in
+            completion(error)
+        })
+    }
+    
 }
 
 

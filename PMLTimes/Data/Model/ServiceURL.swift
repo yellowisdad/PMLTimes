@@ -6,15 +6,22 @@
 //
 
 import Foundation
+import ObjectMapper
 
-class ServiceURL {
-    private(set) var url: URL
-    private(set) var imageDomain: String
-    private(set) var key: String
+public struct ServiceURL: Mappable {
+    public var domain: String = ""
+    public var imageDomain: String = ""
+    public var key: String = ""
+    public var url: URL {
+        return URL(string: domain)!
+    }
     
-    init (url: String, key: String = "", imageDomain: String = "") {
-        self.url = URL(string: url)!
-        self.key = key
-        self.imageDomain = imageDomain
+    public init() {}
+    public init?(map: Map) { }
+    
+    mutating public func mapping(map: Map) {
+        domain    <- map["domain"]
+        imageDomain    <- map["image-domain"]
+        key <- map["key"]
     }
 }

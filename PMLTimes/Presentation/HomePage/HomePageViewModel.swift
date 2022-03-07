@@ -12,7 +12,7 @@ import RxRelay
 class HomePageViewModel {
     private var disposeBag: DisposeBag = DisposeBag()
     
-    private let getMostPopular: MostPopularArticleUseCase = MostPopularArticleUseCase()
+    private let getMostPopular: GetMostPopularArticleUseCase = GetMostPopularArticleUseCaseImpl()
     
     let isSpinning: BehaviorRelay<Bool> = BehaviorRelay(value: false)
     let period: BehaviorRelay<MostPopularPeriod> = BehaviorRelay(value: .day)

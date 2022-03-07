@@ -21,7 +21,7 @@ class SearchResultsViewModel {
     private var disposeBag: DisposeBag = DisposeBag()
     
     // MARK: - UseCase
-    private let searchArticle: SearchArticleUseCase = SearchArticleUseCase()
+    private let searchArticle: GetSearchArticleUseCase = GetSearchArticleUseCaseImpl()
     
     let state: BehaviorRelay<State> = BehaviorRelay(value: .idle)
     let isSpinning: BehaviorRelay<Bool> = BehaviorRelay(value: false)
@@ -73,11 +73,11 @@ extension SearchResultsViewModel {
         self.query = query
         state.accept(.loading)
         
-        searchArticle.execute((query: query,
-                               begin_date: beginDate.customDateFormat("yyyyMMdd"),
-                               end_date: endDate.customDateFormat("yyyyMMdd"),
-                               sort: sort,
-                               page: page.value))
+        searchArticle.execute(query: query,
+                              begin_date: beginDate.customDateFormat("yyyyMMdd"),
+                              end_date: endDate.customDateFormat("yyyyMMdd"),
+                              sort: sort,
+                              page: page.value)
             .subscribe({ (event) in
                 
                 switch event {

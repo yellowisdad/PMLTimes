@@ -13,9 +13,9 @@ class SearchPageViewModel {
     private var disposeBag: DisposeBag = DisposeBag()
     
     // MARK: - UseCase
-    private let searchArticle: SearchArticleUseCase = SearchArticleUseCase()
-    private let getSuggestSearch: SuggestSearchUseCase = SuggestSearchUseCase()
-    private let addSuggestSearch: AddSuggestSearchUseCase = AddSuggestSearchUseCase()
+    private let searchArticle: GetSearchArticleUseCase = GetSearchArticleUseCaseImpl()
+    private let getSuggestSearch: GetSuggestSearchUseCase = GetSuggestSearchUseCaseImpl()
+    private let addSuggestSearch: AddSuggestSearchUseCase = AddSuggestSearchUseCaseImpl()
     
     let error: BehaviorRelay<String?> = BehaviorRelay(value: nil)
     let loading: BehaviorRelay<Bool> = BehaviorRelay(value: false)
@@ -47,7 +47,7 @@ extension SearchPageViewModel {
             newSuggests.remove(at: foundindex)
         }
         newSuggests.insert(query, at: 0)
-        addSuggestSearch.execute(newSuggests)
+        addSuggestSearch.execute(query: newSuggests) { _ in }
     }
     
     func searchTextFieldEmptry() {
@@ -61,11 +61,11 @@ extension SearchPageViewModel {
         }
         loading.accept(true)
         
-        searchArticle.execute((query: query,
-                               begin_date: Date().addChangeDateTime(year: -10).customDateFormat("yyyyMMdd"),
-                               end_date: Date().customDateFormat("yyyyMMdd"),
-                               sort: .newest,
-                               page: 0))
+        searchArticle.execute(query: query,
+                              begin_date: Date().addChangeDateTime(year: -10).customDateFormat("yyyyMMdd"),
+                              end_date: Date().customDateFormat("yyyyMMdd"),
+                              sort: .newest,
+                              page: 0)
             .subscribe({ (event) in
                 self.loading.accept(false)
                 switch event {
@@ -83,7 +83,6 @@ extension SearchPageViewModel {
     
     func searchSuggestion(){
         getSuggestSearch.execute(){ (items,error)  in
-            print(items)
             self.suggests.accept(items)
         }
     }

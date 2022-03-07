@@ -10,13 +10,13 @@ import RxRelay
 
 class LandingPageViewModel {
     
-    private let authUseCase: AuthenticationUseCase = AuthenticationUseCase()
+    private let authUseCase: AuthenticationUseCase = AuthenticationUseCaseImpl()
     let state: BehaviorRelay<State> = BehaviorRelay(value: .idle)
     
     init(){}
     
     func load(){
-        authUseCase.execute(){ service in
+        authUseCase.execute(){ service, _  in
             guard let service = service else {
                 return
             }

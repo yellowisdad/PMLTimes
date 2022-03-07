@@ -15,7 +15,7 @@ public protocol GetMostPopularArticleUseCase {
 final class GetMostPopularArticleUseCaseImpl: GetMostPopularArticleUseCase {
     private var nytRepository: NYTRepository
     
-    init(repo: NYTRepository = NYTRepositoryImpl()) {
+    public init(repo: NYTRepository = NYTRepositoryImpl()) {
         nytRepository = repo
     }
     

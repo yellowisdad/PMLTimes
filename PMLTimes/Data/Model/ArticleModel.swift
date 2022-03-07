@@ -19,7 +19,9 @@ public struct ArticleModel: Mappable {
     public var publishedDate: Date?
     public var url: String = ""
 
+    public init() {}
     public init?(map: Map) { }
+    
     mutating public func mapping(map: Map) {
         url    <- map["url"]
         id    <- map["id"]

@@ -1,5 +1,5 @@
 //
-//  SearchArticleUseCase.swift
+//  GetSearchArticleUseCase.swift
 //  PMLTimes
 //
 //  Created by Methawee Punkaew on 6/3/2565 BE.
@@ -8,15 +8,19 @@
 import Foundation
 import RxSwift
 
-final class SearchArticleUseCase: UseCase {
-    private var nytRepository: NYTRepository!
+public protocol GetSearchArticleUseCase {
+    func execute(query: String, begin_date: String, end_date: String, sort: SearchSort, page: Int) -> Observable<[ArticleModel]>
+}
+
+final class GetSearchArticleUseCaseImpl: GetSearchArticleUseCase {
+    private var nytRepository: NYTRepository
     
     init(repo: NYTRepository = NYTRepositoryImpl()) {
         nytRepository = repo
     }
     
-    public func execute(_ param: (query: String, begin_date: String, end_date: String, sort: SearchSort, page: Int)) -> Observable<[ArticleModel]> {
-        return nytRepository.searchArticle(query: param.query, begin_date: param.begin_date, end_date: param.end_date, sort: param.sort, page: param.page)
+    public func execute(query: String, begin_date: String, end_date: String, sort: SearchSort, page: Int) -> Observable<[ArticleModel]> {
+        return nytRepository.searchArticle(query: query, begin_date: begin_date, end_date: end_date, sort: sort, page: page)
             .flatMapLatest({ (response) -> Observable<[ArticleSearchModel]> in
                 return Observable.just(response.results)
             })
@@ -34,5 +38,3 @@ final class SearchArticleUseCase: UseCase {
             })
     }
 }
-
-
