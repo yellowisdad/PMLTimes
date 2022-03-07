@@ -8,7 +8,6 @@ def pmlTimes_pod
   pod 'Moya-ObjectMapper/RxSwift', '2.9'
   pod 'RxCocoa', '5.1.1'
   pod 'RxOptional', '4.1.0'
-  pod 'RxDataSources', '4.0.1'
   pod 'Kingfisher', '~> 7.0'
   pod 'Firebase'
   pod 'FirebaseFirestoreSwift', '~> 7.0-beta'
