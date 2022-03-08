@@ -270,7 +270,7 @@
                                 <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="voB-Jr-hpM">
-                                        <rect key="frame" x="20" y="5.5" width="317.5" height="33"/>
+                                        <rect key="frame" x="20" y="5.5" width="321" height="33"/>
                                         <subviews>
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="buton_search" translatesAutoresizingMaskIntoConstraints="NO" id="9x5-RC-9dh">
                                                 <rect key="frame" x="8" y="2" width="29" height="29"/>
@@ -279,7 +279,7 @@
                                                 </constraints>
                                             </imageView>
                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Search Article" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="xhc-kA-fO5">
-                                                <rect key="frame" x="45" y="0.0" width="264.5" height="33"/>
+                                                <rect key="frame" x="45" y="0.0" width="268" height="33"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits" returnKeyType="search" enablesReturnKeyAutomatically="YES"/>
                                             </textField>
@@ -297,10 +297,13 @@
                                         </constraints>
                                     </view>
                                     <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" horizontalCompressionResistancePriority="751" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Zu2-Dm-v8Z">
-                                        <rect key="frame" x="337.5" y="0.0" width="68.5" height="44"/>
+                                        <rect key="frame" x="341" y="0.0" width="65" height="44"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="65" id="fsq-43-nyd"/>
+                                        </constraints>
                                         <color key="tintColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="plain" title="Cancel"/>
+                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                        <state key="normal" title="Cancel"/>
                                         <connections>
                                             <action selector="closeButtonTap:" destination="ebF-Cb-2uz" eventType="touchUpInside" id="gNO-ig-R74"/>
                                         </connections>
@@ -418,16 +421,16 @@
                                     </imageView>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gEi-JL-NTM">
                                         <rect key="frame" x="350" y="0.0" width="64" height="44"/>
-                                        <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="plain" title="    "/>
+                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                        <state key="normal" title="    "/>
                                         <connections>
                                             <action selector="filterButtonTap:" destination="Pt7-8E-tOP" eventType="touchUpInside" id="hdx-X9-kJU"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gLa-51-LKK">
                                         <rect key="frame" x="0.0" y="0.0" width="350" height="44"/>
-                                        <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="plain" title="    "/>
+                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                        <state key="normal" title="    "/>
                                         <connections>
                                             <action selector="backButtonTap:" destination="Pt7-8E-tOP" eventType="touchUpInside" id="byp-wC-1ae"/>
                                         </connections>
@@ -502,24 +505,27 @@
                                 <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" horizontalCompressionResistancePriority="751" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5e2-49-LvQ">
-                                        <rect key="frame" x="354.5" y="0.0" width="49.5" height="44"/>
+                                        <rect key="frame" x="344" y="0.0" width="60" height="44"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="60" id="8ku-IQ-6bE"/>
+                                        </constraints>
                                         <color key="tintColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="plain" title="Use"/>
+                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                        <state key="normal" title="Use"/>
                                         <connections>
                                             <action selector="useButtonTap:" destination="zeP-aq-BOa" eventType="touchUpInside" id="YBT-Yl-vGB"/>
                                         </connections>
                                     </button>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="buton_close" translatesAutoresizingMaskIntoConstraints="NO" id="bN3-da-97H">
-                                        <rect key="frame" x="10" y="7.5" width="29.5" height="29.5"/>
+                                        <rect key="frame" x="10" y="8" width="28" height="28"/>
                                         <constraints>
                                             <constraint firstAttribute="width" secondItem="bN3-da-97H" secondAttribute="height" multiplier="1:1" id="eAW-lk-icI"/>
                                         </constraints>
                                     </imageView>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ahA-RG-lNS">
-                                        <rect key="frame" x="0.0" y="0.0" width="39.5" height="44"/>
-                                        <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="plain" title="    "/>
+                                        <rect key="frame" x="0.0" y="0.0" width="38" height="44"/>
+                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                        <state key="normal" title="    "/>
                                         <connections>
                                             <action selector="backButtonTap:" destination="zeP-aq-BOa" eventType="touchUpInside" id="Md1-ra-xiA"/>
                                         </connections>

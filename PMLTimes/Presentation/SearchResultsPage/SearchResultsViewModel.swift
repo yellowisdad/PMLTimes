@@ -9,15 +9,18 @@ import Foundation
 import RxSwift
 import RxRelay
 
-enum State {
-    case idle
-    case loading
-    case loaded
-    case error(e: Error)
-    case emptry
-}
+
 
 class SearchResultsViewModel {
+    
+    enum State {
+        case idle
+        case loading
+        case loaded
+        case error(e: Error)
+        case emptry
+    }
+    
     private var disposeBag: DisposeBag = DisposeBag()
     
     // MARK: - UseCase

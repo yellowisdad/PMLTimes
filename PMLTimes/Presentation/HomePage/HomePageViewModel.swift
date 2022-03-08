@@ -10,19 +10,30 @@ import RxSwift
 import RxRelay
 
 class HomePageViewModel {
+    
+    enum State {
+        case idle
+        case loading
+        case loaded
+        case error
+        case emptry
+    }
+    
     private var disposeBag: DisposeBag = DisposeBag()
     
-    private let getMostPopular: GetMostPopularArticleUseCase = GetMostPopularArticleUseCaseImpl()
-    
+    private let getMostPopularUseCase: GetMostPopularArticleUseCase
     let isSpinning: BehaviorRelay<Bool> = BehaviorRelay(value: false)
     let period: BehaviorRelay<MostPopularPeriod> = BehaviorRelay(value: .day)
-    let state: BehaviorRelay<State> = BehaviorRelay(value: .idle)
     let contents: BehaviorRelay<[ArticleModel]> = BehaviorRelay(value: [])
+    let state: BehaviorRelay<State> = BehaviorRelay(value: .idle)
+    var error: Error?
     
-    init(){
+    init(getMostPopular: GetMostPopularArticleUseCase = GetMostPopularArticleUseCaseImpl()){
+        self.getMostPopularUseCase = getMostPopular
+        
         period
             .subscribe(onNext: { _ in
-                self.load()
+                self.getMostPopular()
             })
             .disposed(by: disposeBag)
     }
@@ -33,31 +44,33 @@ class HomePageViewModel {
 extension HomePageViewModel {
     func viewDidLoad() {
         isSpinning.accept(true)
-        load()
+        getMostPopular()
     }
     
-    private func load() {
+    func getMostPopular(){
         state.accept(.loading)
-        
-        getMostPopular.execute(period.value)
-            .subscribe({ (event) in
-                
-                switch event {
-                case .next(let items):
-                    self.state.accept(.loaded)
-                    self.contents.accept(items)
+            
+            getMostPopularUseCase.execute(period.value)
+                .subscribe({ (event) in
                     
-                case .error(let error):
-                    self.state.accept(.error(e: error))
-                    
-                case .completed:
-                    break
-                }
-            }).disposed(by: disposeBag)
+                    switch event {
+                    case .next(let items):
+                        self.state.accept(.loaded)
+                        self.contents.accept(items)
+                        
+                    case .error(let error):
+                        self.error = error
+                        self.state.accept(.error)
+                        //self.state.accept(.error(e: error))
+                        
+                    case .completed:
+                        break
+                    }
+                }).disposed(by: disposeBag)
     }
     
     func reloadPage(){
-        load()
+        getMostPopular()
     }
     
 }

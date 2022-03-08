@@ -57,6 +57,7 @@
 		7F8DD77A27D3AF7900B0D0CA /* UIView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F8DD77927D3AF7900B0D0CA /* UIView+Extension.swift */; };
 		7F8DD77D27D3B53200B0D0CA /* GetMostPopularArticleUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F8DD77C27D3B53200B0D0CA /* GetMostPopularArticleUseCase.swift */; };
 		7F8DD77F27D3B61700B0D0CA /* MostPopularPeriod.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F8DD77E27D3B61700B0D0CA /* MostPopularPeriod.swift */; };
+		7FAABA5327D69DFC00CD31DC /* AuthenticationUseCaseTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FAABA5227D69DFC00CD31DC /* AuthenticationUseCaseTests.swift */; };
 		7FB2A98627D5DC71006E51C7 /* LandingPageViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FB2A98527D5DC71006E51C7 /* LandingPageViewModel.swift */; };
 		7FB2A98A27D5DFBF006E51C7 /* AuthenticationUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FB2A98927D5DFBF006E51C7 /* AuthenticationUseCase.swift */; };
 		7FC7444527D6394C002B2BF5 /* GetSearchArticleUseCaseTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FC7444427D6394B002B2BF5 /* GetSearchArticleUseCaseTest.swift */; };
@@ -74,6 +75,11 @@
 		7FCFECEC27D3F795006C0437 /* HighlightTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FCFECEA27D3F795006C0437 /* HighlightTableViewCell.swift */; };
 		7FCFECED27D3F795006C0437 /* HighlightTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7FCFECEB27D3F795006C0437 /* HighlightTableViewCell.xib */; };
 		7FE59A5E27D64E0F00F039B2 /* AddSuggestSearchUseCaseTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FE59A5D27D64E0F00F039B2 /* AddSuggestSearchUseCaseTest.swift */; };
+		7FEEB26027D6CCD9006E1ADB /* HomePageViewTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FEEB25F27D6CCD9006E1ADB /* HomePageViewTests.swift */; };
+		7FEEB26227D6CCF4006E1ADB /* DetailWebViewTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FEEB26127D6CCF4006E1ADB /* DetailWebViewTests.swift */; };
+		7FEEB26427D6CD10006E1ADB /* SearchPageViewTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FEEB26327D6CD10006E1ADB /* SearchPageViewTest.swift */; };
+		7FEEB26627D6CD23006E1ADB /* SearchResultsViewTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FEEB26527D6CD23006E1ADB /* SearchResultsViewTests.swift */; };
+		7FEEB26827D6CD35006E1ADB /* FilterPageViewTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FEEB26727D6CD35006E1ADB /* FilterPageViewTests.swift */; };
 		B2215809564F319275F4743B /* Pods_PMLTimesTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 59B5EFEB13098563A8BCB46F /* Pods_PMLTimesTests.framework */; };
 /* End PBXBuildFile section */
 
@@ -153,6 +159,7 @@
 		7F8DD77927D3AF7900B0D0CA /* UIView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extension.swift"; sourceTree = "<group>"; };
 		7F8DD77C27D3B53200B0D0CA /* GetMostPopularArticleUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetMostPopularArticleUseCase.swift; sourceTree = "<group>"; };
 		7F8DD77E27D3B61700B0D0CA /* MostPopularPeriod.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MostPopularPeriod.swift; sourceTree = "<group>"; };
+		7FAABA5227D69DFC00CD31DC /* AuthenticationUseCaseTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationUseCaseTests.swift; sourceTree = "<group>"; };
 		7FB2A98527D5DC71006E51C7 /* LandingPageViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LandingPageViewModel.swift; sourceTree = "<group>"; };
 		7FB2A98927D5DFBF006E51C7 /* AuthenticationUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationUseCase.swift; sourceTree = "<group>"; };
 		7FC7444427D6394B002B2BF5 /* GetSearchArticleUseCaseTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetSearchArticleUseCaseTest.swift; sourceTree = "<group>"; };
@@ -170,6 +177,11 @@
 		7FCFECEA27D3F795006C0437 /* HighlightTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HighlightTableViewCell.swift; sourceTree = "<group>"; };
 		7FCFECEB27D3F795006C0437 /* HighlightTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HighlightTableViewCell.xib; sourceTree = "<group>"; };
 		7FE59A5D27D64E0F00F039B2 /* AddSuggestSearchUseCaseTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddSuggestSearchUseCaseTest.swift; sourceTree = "<group>"; };
+		7FEEB25F27D6CCD9006E1ADB /* HomePageViewTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePageViewTests.swift; sourceTree = "<group>"; };
+		7FEEB26127D6CCF4006E1ADB /* DetailWebViewTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailWebViewTests.swift; sourceTree = "<group>"; };
+		7FEEB26327D6CD10006E1ADB /* SearchPageViewTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchPageViewTest.swift; sourceTree = "<group>"; };
+		7FEEB26527D6CD23006E1ADB /* SearchResultsViewTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchResultsViewTests.swift; sourceTree = "<group>"; };
+		7FEEB26727D6CD35006E1ADB /* FilterPageViewTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterPageViewTests.swift; sourceTree = "<group>"; };
 		D66985B3427B67893AA42055 /* Pods-PMLTimes.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PMLTimes.debug.xcconfig"; path = "Target Support Files/Pods-PMLTimes/Pods-PMLTimes.debug.xcconfig"; sourceTree = "<group>"; };
 		DBE1051CE0B6C3C4E4F5887C /* Pods-PMLTimesTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PMLTimesTests.release.xcconfig"; path = "Target Support Files/Pods-PMLTimesTests/Pods-PMLTimesTests.release.xcconfig"; sourceTree = "<group>"; };
 		F8B0BBEDB078F26D5258254F /* Pods_PMLTimes_PMLTimesUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PMLTimes_PMLTimesUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -290,15 +302,9 @@
 				7FC7444427D6394B002B2BF5 /* GetSearchArticleUseCaseTest.swift */,
 				7FC7444627D63C13002B2BF5 /* GetSuggestSearchUseCaseTest.swift */,
 				7FE59A5D27D64E0F00F039B2 /* AddSuggestSearchUseCaseTest.swift */,
+				7FAABA5227D69DFC00CD31DC /* AuthenticationUseCaseTests.swift */,
 			);
 			path = Usecase;
-			sourceTree = "<group>";
-		};
-		7F52E27F27D61B3100AF4D83 /* Viewmodel */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Viewmodel;
 			sourceTree = "<group>";
 		};
 		7F6F2DF327D3566000ACCC8C = {
@@ -339,9 +345,13 @@
 		7F6F2E1527D3566200ACCC8C /* PMLTimesTests */ = {
 			isa = PBXGroup;
 			children = (
-				7F52E27F27D61B3100AF4D83 /* Viewmodel */,
 				7F52E27E27D61B2900AF4D83 /* Usecase */,
 				7F52E27B27D61AF300AF4D83 /* Spy */,
+				7FEEB25F27D6CCD9006E1ADB /* HomePageViewTests.swift */,
+				7FEEB26127D6CCF4006E1ADB /* DetailWebViewTests.swift */,
+				7FEEB26327D6CD10006E1ADB /* SearchPageViewTest.swift */,
+				7FEEB26527D6CD23006E1ADB /* SearchResultsViewTests.swift */,
+				7FEEB26727D6CD35006E1ADB /* FilterPageViewTests.swift */,
 			);
 			path = PMLTimesTests;
 			sourceTree = "<group>";
@@ -861,12 +871,18 @@
 			buildActionMask = 2147483647;
 			files = (
 				7F52E28127D61B7100AF4D83 /* NYTRepositorySpy.swift in Sources */,
+				7FEEB26627D6CD23006E1ADB /* SearchResultsViewTests.swift in Sources */,
 				7FE59A5E27D64E0F00F039B2 /* AddSuggestSearchUseCaseTest.swift in Sources */,
+				7FEEB26227D6CCF4006E1ADB /* DetailWebViewTests.swift in Sources */,
 				7F61A59F27D6269A006451A4 /* GetMostPopularArticleUseCaseSpy.swift in Sources */,
 				7FC7444727D63C13002B2BF5 /* GetSuggestSearchUseCaseTest.swift in Sources */,
+				7FEEB26027D6CCD9006E1ADB /* HomePageViewTests.swift in Sources */,
 				7F61A5AB27D62CDA006451A4 /* GetMostPopularArticleUseCaseTests.swift in Sources */,
 				7FC7444527D6394C002B2BF5 /* GetSearchArticleUseCaseTest.swift in Sources */,
+				7FAABA5327D69DFC00CD31DC /* AuthenticationUseCaseTests.swift in Sources */,
 				7F61A5A327D62AF8006451A4 /* GetSearchArticleUseCaseSpy.swift in Sources */,
+				7FEEB26827D6CD35006E1ADB /* FilterPageViewTests.swift in Sources */,
+				7FEEB26427D6CD10006E1ADB /* SearchPageViewTest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1045,8 +1061,10 @@
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UIUserInterfaceStyle = Light;
 				IPHONEOS_DEPLOYMENT_TARGET = 14.2;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1076,8 +1094,10 @@
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UIUserInterfaceStyle = Light;
 				IPHONEOS_DEPLOYMENT_TARGET = 14.2;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",

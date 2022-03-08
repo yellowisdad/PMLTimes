@@ -11,7 +11,7 @@ import RxSwift
 
 class DetailWebView: BaseViewController, UINavigationControllerDelegate, UIGestureRecognizerDelegate {
     
-    @IBOutlet weak var webView: WKWebView!
+    @IBOutlet weak var webView: WKWebView?
     private var viewModel: DetailWebViewModel!
     
     fileprivate var disposeBag = DisposeBag()
@@ -34,15 +34,16 @@ class DetailWebView: BaseViewController, UINavigationControllerDelegate, UIGestu
         
         bind(to: viewModel)
         viewModel.load()
+        
     }
-
+    
     private func bind(to viewModel: DetailWebViewModel) {
         viewModel.loading.asObservable()
             .observeOn(MainScheduler.instance)
             .bind(onNext: { isLoading in
                 if isLoading {
                     if let url = URL(string: viewModel.strURL) {
-                        self.webView.load(URLRequest(url: url))
+                        self.webView?.load(URLRequest(url: url))
                     } else {
                         print("error")
                     }

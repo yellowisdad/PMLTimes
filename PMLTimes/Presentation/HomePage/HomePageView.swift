@@ -100,30 +100,30 @@ extension HomePageView {
             .disposed(by: disposeBag)
         
         viewModel.state.asObservable()
-            .observeOn(MainScheduler.instance)
-            .bind(onNext: { state in
-                self.emtryLabel.isHidden = true
-                switch state {
-                case .idle:
-                    break
-                case .loading:
-                    break
-                case .loaded:
-                    self.topRefreshControl?.endRefreshing()
-                    if viewModel.isSpinning.value {
-                        viewModel.isSpinning.accept(false)
-                    }
-                case .error(let error):
-                    self.emtryLabel.text = error.localizedDescription
-                    self.emtryLabel.isHidden = false
-                    if self.viewModel.contents.value.count > 0 {
-                        self.viewModel.contents.accept([])
-                    }
-                case .emptry:
-                    self.emtryLabel.text = "results not found"
-                    self.emtryLabel.isHidden = false
-                }
-            }).disposed(by: disposeBag)
+                    .observeOn(MainScheduler.instance)
+                    .bind(onNext: { state in
+                        self.emtryLabel.isHidden = true
+                        switch state {
+                        case .idle:
+                            break
+                        case .loading:
+                            break
+                        case .loaded:
+                            self.topRefreshControl?.endRefreshing()
+                            if viewModel.isSpinning.value {
+                                viewModel.isSpinning.accept(false)
+                            }
+                        case .error:
+                            self.emtryLabel.text = self.viewModel.error?.localizedDescription ?? ""
+                            self.emtryLabel.isHidden = false
+                            if self.viewModel.contents.value.count > 0 {
+                                self.viewModel.contents.accept([])
+                            }
+                        case .emptry:
+                            self.emtryLabel.text = "results not found"
+                            self.emtryLabel.isHidden = false
+                        }
+                    }).disposed(by: disposeBag)
     }
     
     func addTopRefresh() {
