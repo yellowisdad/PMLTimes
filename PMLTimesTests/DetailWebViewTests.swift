@@ -15,8 +15,11 @@ class DetailWebViewTests: XCTestCase {
     func test_DetailView_AssertNotNil() throws {
         let vm = DetailWebViewModel(strURL: "https://www.google.com/")
         let page = DetailWebView.create(with: vm)
+        vm.load()
         XCTAssertNotNil(page, "Error did not find view")
         //page.viewDidLoad()
+        
+        
     }
 
 }

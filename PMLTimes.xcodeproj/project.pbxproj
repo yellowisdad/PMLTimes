@@ -307,13 +307,6 @@
 			path = Usecase;
 			sourceTree = "<group>";
 		};
-		7F52E27F27D61B3100AF4D83 /* Viewmodel */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Viewmodel;
-			sourceTree = "<group>";
-		};
 		7F6F2DF327D3566000ACCC8C = {
 			isa = PBXGroup;
 			children = (
@@ -352,7 +345,6 @@
 		7F6F2E1527D3566200ACCC8C /* PMLTimesTests */ = {
 			isa = PBXGroup;
 			children = (
-				7F52E27F27D61B3100AF4D83 /* Viewmodel */,
 				7F52E27E27D61B2900AF4D83 /* Usecase */,
 				7F52E27B27D61AF300AF4D83 /* Spy */,
 				7FEEB25F27D6CCD9006E1ADB /* HomePageViewTests.swift */,

@@ -15,7 +15,7 @@ class HomePageViewModel {
         case idle
         case loading
         case loaded
-        case error(e: Error)
+        case error
         case emptry
     }
     
@@ -26,6 +26,7 @@ class HomePageViewModel {
     let period: BehaviorRelay<MostPopularPeriod> = BehaviorRelay(value: .day)
     let contents: BehaviorRelay<[ArticleModel]> = BehaviorRelay(value: [])
     let state: BehaviorRelay<State> = BehaviorRelay(value: .idle)
+    var error: Error?
     
     init(getMostPopular: GetMostPopularArticleUseCase = GetMostPopularArticleUseCaseImpl()){
         self.getMostPopularUseCase = getMostPopular
@@ -58,7 +59,9 @@ extension HomePageViewModel {
                         self.contents.accept(items)
                         
                     case .error(let error):
-                        self.state.accept(.error(e: error))
+                        self.error = error
+                        self.state.accept(.error)
+                        //self.state.accept(.error(e: error))
                         
                     case .completed:
                         break

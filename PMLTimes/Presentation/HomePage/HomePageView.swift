@@ -113,8 +113,8 @@ extension HomePageView {
                             if viewModel.isSpinning.value {
                                 viewModel.isSpinning.accept(false)
                             }
-                        case .error(let error):
-                            self.emtryLabel.text = error.localizedDescription
+                        case .error:
+                            self.emtryLabel.text = self.viewModel.error?.localizedDescription ?? ""
                             self.emtryLabel.isHidden = false
                             if self.viewModel.contents.value.count > 0 {
                                 self.viewModel.contents.accept([])
